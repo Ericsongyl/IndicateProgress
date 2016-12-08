@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="IndicateProgressView">
+	    <attr name="backgroundColor" format="color"/>
+		<attr name="startProgressColor" format="color"/>
+		<attr name="endProgressColor" format="color"/>
+		<attr name="indicateTextcolor" format="color"/>
+	</declare-styleable>
+</resources>
