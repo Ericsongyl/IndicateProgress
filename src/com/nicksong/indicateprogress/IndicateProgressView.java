@@ -20,12 +20,12 @@ public class IndicateProgressView extends View {
 	private int endProgressColor = 0xfffd715a;
 	private int indicateTextColor = 0xffef4f37;
 	private int radius = 10; //进度条四个角的角度px
-	private int indicatorRadius = 28; //进度指示器四个角的角度px
+	private int indicatorRadius = 32; //进度指示器四个角的角度px
 	private int defaultContentMargin = 2;
 	private int defaultIndicateMargin = 30;
 	private int max = 100;
 	private int progress;
-	private int textSize = 36;
+	private int textSize = 32;
 	private String indicateText;
 	private String PERCENT_STR = "100%";
 	private Paint backPaint;
@@ -110,8 +110,9 @@ public class IndicateProgressView extends View {
 		canvas.drawRoundRect(indicatorContentRectF, indicatorRadius, indicatorRadius, indicateBackPaint);
 		
 		//画指示器文本
+		indicateTextPaint.setTextSize(height * 2 / 5);
 		float textX = indicatorContentRectF.centerX() - indicateTextPaint.measureText(indicateText) / 2;
-		float textY = height * 3 / 5;
+		float textY = backRectF.centerY() + height / 8;
 		canvas.drawText(indicateText, textX, textY, indicateTextPaint);
 	}
 	
