@@ -92,6 +92,10 @@ public class IndicateProgressView extends View {
 		//画指示器边框
 		float left = width * getScale() - indicateTextPaint.measureText(PERCENT_STR) - defaultIndicateMargin;
 		float right = width * getScale();
+		if (getScale() <= 0.5) {
+			left = width * getScale() - defaultIndicateMargin;
+			right = left + indicateTextPaint.measureText(PERCENT_STR) + defaultIndicateMargin;
+		}
 		if (left <= 0f) {
 			left = 0f;
 			right = indicateTextPaint.measureText(PERCENT_STR) + defaultIndicateMargin;
