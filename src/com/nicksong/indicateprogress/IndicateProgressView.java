@@ -90,6 +90,7 @@ public class IndicateProgressView extends View {
 		canvas.drawRoundRect(progressRectF, radius, radius, progressPaint);
 		
 		//画指示器边框
+		indicateTextPaint.setTextSize(height * 2 / 5);
 		float left = width * getScale() - indicateTextPaint.measureText(PERCENT_STR) - defaultIndicateMargin;
 		float right = width * getScale();
 		if (getScale() <= 0.5) {
