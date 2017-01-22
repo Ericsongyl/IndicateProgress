@@ -151,6 +151,7 @@ public class IndicateProgressView extends View {
 	
 	public void setProgress(int progress) {
 		this.progress = progress;
+		postInvalidate();
 	}
 	
 	private float getScale() {
